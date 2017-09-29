@@ -18,7 +18,23 @@ $('.buttonMenu').on('click', '#createButton', function() {
 	createGrid(gridData);
 });
 
+// Button that enables black pen
+$('.buttonMenu').on('click', '#blackButton', function() {
+	$('.container').on('mouseenter mouseleave', '.unit', function() {
+		$(this).addClass('blackPen');
+		$('.blackPen').hover(
+			function() {
+			$(this).css({'background-color': 'black'});
+		}, function() {
+			$(this).css({'background-color': 'black'});
+		});
+	});
+});
 
+// Button that erases the grid cells
+$('.buttonMenu').on('click', '#eraserButton', function() {
+	$()
+});
 
 
 
