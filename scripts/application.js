@@ -52,9 +52,10 @@ $('.buttonMenu').on('click', '#eraserButton', function() {
 	});
 });
 
-//Size button
-$('.buttonMenu').on('click', '#sizeButton', function() {
-	resetGrid();
+
+//Clear drawing button
+$('.buttonMenu').on('click', '#clearButton', function() {
+	$('.container').empty();
 });
 
 }); //End of the .ready function
