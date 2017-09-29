@@ -4,6 +4,7 @@
 	outline: 1px solid;
 	position: fixed;
 	left: 50%;
+	top: 10%;
 	transform: translateX(-50%);
 }
 .unit {
@@ -11,5 +12,32 @@
 	float: left;
 }
 .buttonMenu {
+	position: absolute;
+	transform: translateY(50%);
+	width: 300px;
+	height: 300px;
 	outline: 1px solid;
+}
+.buttonMenu button {
+	position: absolute;
+	width: 150px;
+	height: 30px;
+	left: 10%;
+	text-align: center;
+}
+#blackButton {
+	top: 20%;
+	transform: translateY(-20%);
+}
+#randomButton {
+	top: 40%;
+	transform: translateY(-40%);
+}
+#eraserButton {
+	top: 60%;
+	transform: translateY(-60%);
+}
+#clearButton {
+	top: 80%;
+	transform: translateY(-80%);
 }
