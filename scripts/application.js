@@ -11,31 +11,50 @@ function createGrid(x) {
 	$('.unit').height(500/x);
 };
 
-// Button that creates the grid
-$('.buttonMenu').on('click', '#createButton', function() {
+let defaultSize = 16;
+
+function resetGrid() {
 	let gridData = prompt("Please insert a grid size (64+ will increase page load time)");
 	$('.container').empty();
 	createGrid(gridData);
-});
+};
+
+/*function setGrid(){
+	createGrid(defaultSize);
+};*/
 
 // Button that enables black pen
 $('.buttonMenu').on('click', '#blackButton', function() {
-	$('.container').on('mouseenter mouseleave', '.unit', function() {
-		$(this).addClass('blackPen');
-		$('.blackPen').hover(
-			function() {
-			$(this).css({'background-color': 'black'});
-		}, function() {
-			$(this).css({'background-color': 'black'});
-		});
+	resetGrid();
+	//setGrid();
+	$('.container').on('mouseenter', '.unit', function() {
+		$(this).css({'background-color': 'black'});
 	});
 });
 
-// Button that erases the grid cells
-$('.buttonMenu').on('click', '#eraserButton', function() {
-	$()
+//Button for random colors
+$('.buttonMenu').on('click', '#randomButton', function() {
+	resetGrid();
+	//setGrid();
+	$('.container').on('mouseenter', '.unit', function() {
+		let r = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+    let color = "rgb("+r+","+g+","+b+")"
+    $(this).css("background-color", color);
+	});
 });
 
+//Eraser button
+$('.buttonMenu').on('click', '#eraserButton', function() {
+	$('.container').on('click', '.unit', function() {
+		$(this).css("background-color", 'white');
+	});
+});
 
+//Size button
+$('.buttonMenu').on('click', '#sizeButton', function() {
+	resetGrid();
+});
 
 }); //End of the .ready function

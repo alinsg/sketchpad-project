@@ -10,3 +10,6 @@
 	display: inline-block;
 	float: left;
 }
+.buttonMenu {
+	outline: 1px solid;
+}
