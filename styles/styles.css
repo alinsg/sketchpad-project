@@ -3,8 +3,9 @@
 	width: 500px;
 	height: 500px;
 	box-sizing: border-box;
-	border: 2px solid;
-	border-radius: 2px;
+	outline: 1px solid;
+	/* border: 2px solid; */
+	/* border-radius: 2px; */
 	position: fixed;
 	left: 50%;
 	top: 15%;

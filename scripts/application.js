@@ -7,8 +7,12 @@ function createGrid(x) {
 			$('.container').append("<div class='unit'></div>");
 		}
 	}
-	$('.unit').width(500/x);
-	$('.unit').height(500/x);
+
+	let fixWidth = (500/x).toFixed(1);
+	let fixHeight = (500/x).toFixed(1);
+
+	$('.unit').width(fixWidth);
+	$('.unit').height(fixHeight);
 };
 
 let defaultSize = 16;
