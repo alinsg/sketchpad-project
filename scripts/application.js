@@ -8,8 +8,8 @@ function createGrid(x) {
 		}
 	}
 
-	let fixWidth = (500/x).toFixed(1);
-	let fixHeight = (500/x).toFixed(1);
+	let fixWidth = (512/x).toFixed();
+	let fixHeight = (512/x).toFixed();
 
 	$('.unit').width(fixWidth);
 	$('.unit').height(fixHeight);
