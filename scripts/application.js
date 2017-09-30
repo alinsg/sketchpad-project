@@ -47,7 +47,7 @@ $('.buttonMenu').on('click', '#randomButton', function() {
 
 //Eraser button
 $('.buttonMenu').on('click', '#eraserButton', function() {
-	$('.container').on('click', '.unit', function() {
+	$('.container').on('mouseenter', '.unit', function() {
 		$(this).css("background-color", 'white');
 	});
 });
